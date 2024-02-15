@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:target{
+    padding-top:70px;
+    margin-top:-70px;
+}
+
+header {
+    height: 50dvh;
+    background: url("../media/background-min.jpg") no-repeat top;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(13, 92, 119);
+    padding: 1rem 0;
+    overflow: hidden;
+    > ul {
+        list-style-type: none;
+        float: right;
+        > li {
+            display: inline;
+            > a {
+                text-decoration: none;
+                color: white;
+                padding: 10px 10px;
+                margin-left: 5px;
+                font-size: 1rem;
+                transition: color 0.3s ease;
+            }
+            > a:hover {
+                background-color: var(--main-color, rgb(142, 196, 187));
+                transition: background-color 0.3s ease;
+            }
+        }
+    }
+}
+
+main {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+main section {
+    margin-bottom: 1rem;
+    > p {
+        margin: 0.5rem 0;
+    }
+}
+  
+.method {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    > h4::after {
+        content: "";
+        display: block;
+        width: 20%;
+        height: 2px;
+        background-color: rgb(17, 142, 164);
+        margin: 2px 0;
+    }
+}
+
+footer {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    background-color: var(--main-color, white);
+    text-align: center;
+    > p a {
+        text-decoration: none;
+    }
+}
