@@ -201,7 +201,7 @@ footer {
         height: auto;
         padding: 2rem 0;
     }
-    
+
     header {
         font-size: smaller;
         margin-left: 1rem;
@@ -238,5 +238,23 @@ footer {
     .contact-links {
         padding-bottom: 1rem;
         margin-right: 0;
+    }
+
+    #top-btn {
+        visibility: hidden; 
+    }
+
+    #top-btn::after {
+        content: "Top\2191";
+        visibility: visible;
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 0.5rem;
+        color: black;
+        text-decoration: none;
+        background-color: rgba(240, 240, 240, 0.815);
+        border: 1px solid #dfdfdf;
+        border-radius: 0.5rem;
     }
 }
