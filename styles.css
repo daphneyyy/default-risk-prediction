@@ -79,7 +79,7 @@ header nav {
 .resource-links {
     background-color: rgba(240, 240, 240, 0.26);
     border: 1px solid #dfdfdf;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     color: #000000;
     cursor: pointer;
     font-size: 1rem;
@@ -182,5 +182,56 @@ footer {
     > a {
         text-decoration: none;
         color: white;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-links {
+        margin: 0.1rem 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        font-size: smaller;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 0;
+        > h1 {
+            font-size: 2rem;
+        }
+        > h2 {
+            font-size: 1.5rem;
+        }
+    }
+
+    header nav {
+        display: none;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 0 2rem;
+    }
+
+    .footer-container {
+        margin: 0 1rem;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-links {
+        padding-bottom: 1rem;
+        margin-right: 0;
     }
 }
