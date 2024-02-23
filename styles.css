@@ -125,8 +125,7 @@ main section {
 }
 
 .method {
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0 2rem 1rem;
     > h4::after {
         content: "";
         display: block;
@@ -137,6 +136,52 @@ main section {
     }
 }
 
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    > details {
+        margin: 0.3rem 0;
+        border-radius: 10px;
+        max-width: 500px;
+        > summary  {
+            display: inline-block;
+            background-color: rgb(44, 131, 160);
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+            color: white;
+            &::before {
+                content: "\25B6";
+                width: 0.5rem;
+                height: 0.5rem;
+                color: white;
+                margin-right: 0.2rem;
+            }
+        }
+        > p {
+            padding: 10px;
+            background-color: #e4eaef;
+            border-radius: 0 5px 5px 5px;
+            margin-top: 0;
+            font-size: 0.9rem;
+        }
+        &[open] summary {
+            border-radius: 5px 5px 0 0;
+            &::before {
+                content: "\25BC";
+                width: 0.5rem;
+                height: 0.5rem;
+                color: white;
+                margin-right: 0.2rem;
+            }
+        }
+        &[open] p {
+            display: block;
+        }
+    }
+}
+
 #top-btn {
     position: fixed;
     bottom: 4rem;
@@ -144,9 +189,19 @@ main section {
     padding: 0.5rem;
     color: black;
     text-decoration: none;
-    background-color: rgb(240, 240, 240);
+    background-color: rgba(240, 240, 240, 0.815);
     border: 1px solid #dfdfdf;
     border-radius: 1rem;
+    transition: all 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#top-btn:hover {
+    background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.19);
+    outline: 0;
 }
 
 footer {
@@ -185,7 +240,12 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px){
+.contact-links a:hover,
+.authors p a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
     .links {
         flex-direction: column;
         align-items: center;
@@ -241,7 +301,7 @@ footer {
     }
 
     #top-btn {
-        visibility: hidden; 
+        visibility: hidden;
     }
 
     #top-btn::after {
