@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>Scoring Risk of Default</title>
-        <meta name="description" content="2024 UC San Diego Data Science Capstone Project, written by Section B18 Group 2.">
+        <meta name="description"
+            content="2024 UC San Diego Data Science Capstone Project, written by Section B18 Group 2.">
         <meta name="author" content="Jessica Guzman">
         <meta name="author" content="Kuangyu Zou">
         <meta name="author" content="Xuewen Yang">
         <meta name="author" content="Haicheng Xu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans"
+            rel="stylesheet">
         <link type="text/css" href="styles.css" rel="stylesheet">
         <link href="ucsd-icon.png" rel="icon">
     </head>
@@ -18,20 +20,47 @@
             <h1>Credit Score Alternative</h1>
             <h2>Scoring Risk of Default Using Banking Transaction Data</h2>
             <div class="authors">
-                <p>By: 
-                    <a href="https://github.com/je-guz">Jessica Guzman</a><sup>1,2</sup>,
-                    <a href="https://github.com/Xu-Haicheng">Haicheng Xu</a><sup>1,3</sup>,
-                    <a href="https://github.com/daphneyyy">Xuewen Yang</a><sup>1,2</sup>, and
-                    <a href="https://github.com/KuangyuZou">Kuangyu Zou</a><sup>1,2</sup>.
+                <!-- <p>By:
+                    <a href="https://github.com/je-guz">Jessica
+                        Guzman</a><sup>1,2</sup>,
+                    <a href="https://github.com/Xu-Haicheng">Haicheng
+                        Xu</a><sup>1,3</sup>,
+                    <a href="https://github.com/daphneyyy">Xuewen
+                        Yang</a><sup>1,2</sup>, and
+                    <a href="https://github.com/KuangyuZou">Kuangyu
+                        Zou</a><sup>1,2</sup>.
+                </p> -->
+                <p>By:
+                    <a href="https://github.com/je-guz">Jessica
+                        Guzman</a>,
+                    <a href="https://github.com/Xu-Haicheng">Haicheng (Kevin)
+                        Xu</a>,
+                    <a href="https://github.com/daphneyyy">Xuewen (Daphne)
+                        Yang</a>, and
+                    <a href="https://github.com/KuangyuZou">Kuangyu (Connie)
+                        Zou</a>.
+                </p>
+                <p>Mentors:
+                    <a
+                        href="https://www.linkedin.com/in/brian-duke-07666a8/">Brian
+                        Duke (Prism Data, Inc.)</a> and
+                    <a href="https://www.berkustun.com/">Berk Ustun (UCSD)</a>.
                 </p>
             </div>
-            <p><sup>1</sup>Hal&#305;c&#305;o&gbreve;lu Data Science Institute, UC San Diego</p>
-            <p><sup>2</sup>Department of Mathematics, UC San Diego</p>
-            <p><sup>3</sup>Department of Economics, UC San Diego</p>
+            <!-- <div class="institutions">
+                <p><sup>1</sup><a href="https://datascience.ucsd.edu/">Hal&#305;c&#305;o&gbreve;lu Data Science Institute,
+                    UC San Diego</a></p>
+                <p><sup>2</sup><a href="https://math.ucsd.edu/">Department of Mathematics, UC San Diego</a></p>
+                <p><sup>3</sup><a href="https://economics.ucsd.edu/">Department of Economics, UC San Diego</a></p>
+                <p><sup>4</sup><a href="https://www.prismdata.com/">Prism Data, Inc.</a></p>
+            </div> -->
             <div class="links">
-                <a href="https://github.com/daphneyyy/dsc-capstone-project" class="resource-links" target="_blank">View Code</a>
-                <a href="#" class="resource-links" target="_blank">View Poster</a>
-                <a href="#" class="resource-links" target="_blank">View Report</a>
+                <a href="https://github.com/daphneyyy/dsc-capstone-project"
+                    class="resource-links" target="_blank">View Code</a>
+                <a href="#" class="resource-links" target="_blank">View
+                    Poster</a>
+                <a href="#" class="resource-links" target="_blank">View
+                    Report</a>
             </div>
             <nav>
                 <ul>
@@ -41,6 +70,7 @@
                     <li><a href="#results">Results</a></li>
                     <li><a href="#discussion">Discussion</a></li>
                     <li><a href="#references">References</a></li>
+                    <li><a href="#contact">Contacts</a></li>
                 </ul>
             </nav>
         </header>
@@ -81,30 +111,18 @@
                     account type has different inflow and outflow amounts per
                     customer.
                 </p>
+                <img src="media/Model_flow_chart.jpeg" alt="Model Flow Chart" />
             </section>
             <section id="methods">
                 <h3>Methods</h3>
-                <p>placeholder placeholder placeholder placeholder
-                    placeholder placeholder placeholder placeholder
-                    placeholder placeholder placeholder placeholder
-                    placeholder placeholder placeholder placeholder
-                    placeholder placeholder placeholder placeholder
-                    placeholder placeholder placeholder placeholder
-                    placeholder placeholder</p>
+                <p>Our prediction model heavily depended on the features derived
+                    from the datasets. This section outlines the methodologies
+                    employed to generate these features, crucial for the
+                    efficacy of our predictive modeling framework.
+                </p>
 
-                <div class="method">
-                    <h4>Category Classification</h4>
-                    <p>placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder</p>
-                </div>
+                <img src="media/feature_breakdown_background.jpg"
+                    alt="Feature Breakdown" />
                 <div class="method">
                     <h4>Income Estimation</h4>
                     <p>placeholder placeholder placeholder placeholder
@@ -123,7 +141,8 @@
                         placeholder placeholder</p>
                 </div>
                 <div class="method">
-                    <h4>Feature Engineering</h4>
+                    <h4>Probability of Default Based on Percentage Spent of
+                        Inflows and Income by Outflow Category</h4>
                     <p>placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
@@ -137,7 +156,7 @@
                         placeholder placeholder</p>
                 </div>
                 <div class="method">
-                    <h4>Cash Score Prediction</h4>
+                    <h4>Count of Account Type</h4>
                     <p>placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
@@ -151,7 +170,64 @@
                         placeholder placeholder</p>
                 </div>
                 <div class="method">
-                    <h4>Models</h4>
+                    <h4>Balance and Difference in Balance Regression
+                        Coefficients</h4>
+                    <p>placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder</p>
+                </div>
+                <div class="method">
+                    <h4>Moving Average of Standardized Balance</h4>
+                    <p>placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder</p>
+                </div>
+                <div class="method">
+                    <h4>Inflow Percentage Features</h4>
+                    <p>placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder</p>
+                </div>
+                <div class="method">
+                    <h4>Outflow-to-Income Ratio Features</h4>
+                    <p>placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder placeholder placeholder
+                        placeholder placeholder</p>
+                </div>
+                <div class="method">
+                    <h4>Feature Selection and Models</h4>
                     <p>placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
@@ -159,21 +235,31 @@
                         placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder placeholder
                         placeholder placeholder placeholder</p>
+                    <img src="media/feature_selection.jpg"
+                        alt="Feature Selection" />
                     <div class="dropdown-menu">
                         <details class="model-detail">
-                            <summary>In-depth technical details of XGBoost</summary>
-                            <p>placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder</p>
-                        </details>
-                        <details class="model-detail">
-                            <summary>In-depth technical details of SVM</summary>
+                            <summary>Logistic Regression</summary>
                             <p>placeholder placeholder placeholder placeholder
                                 placeholder placeholder placeholder placeholder
                                 placeholder placeholder placeholder placeholder
                                 placeholder placeholder placeholder placeholder
                                 placeholder placeholder</p>
+                        </details>
+                        <details class="model-detail">
+                            <summary>Support Vector Machine</summary>
+                            <p>placeholder placeholder placeholder placeholder
+                                placeholder placeholder placeholder placeholder
+                                placeholder placeholder placeholder placeholder
+                                placeholder placeholder placeholder placeholder
+                                placeholder placeholder</p>
+                        </details>
+                        <details class="model-detail">
+                            <summary>XGBoost</summary>
+                            <p>placeholder placeholder placeholder placeholder
+                                placeholder placeholder placeholder placeholder
+                                placeholder placeholder placeholder placeholder
+                                placeholder placeholder placeholder</p>
                         </details>
                     </div>
                 </div>
@@ -191,6 +277,265 @@
                     placeholder placeholder placeholder placeholder
                     placeholder placeholder placeholder placeholder
                     placeholder placeholder</p>
+                <ul class="metrics">
+                    <li>
+                        <strong>Precision</strong>: measures the percentage of
+                        predictions made by the model that are correct.
+                        <math display="inline" class="formulas">
+                            <mtext>Precision = </mtext>
+                            <mfrac>
+                                <mrow>
+                                    <msup>
+                                        <mi>True positives</mi>
+                                    </msup>
+                                </mrow>
+                                <mrow>
+                                    <mo>(</mo>
+                                    <mi>True positives</mi>
+                                    <mo>+</mo>
+                                    <mi>False positives</mi>
+                                    <mo>)</mo>
+                                </mrow>
+                            </mfrac>
+                        </math>
+                    </li>
+                    <li><strong>Recall</strong>: measures the percentage of
+                        relevant data points that were correctly identified by
+                        the model.</li>
+                    <math display="inline" class="formulas">
+                        <mtext>Recall = </mtext>
+                        <mfrac>
+                            <mrow>
+                                <msup>
+                                    <mi>True positives</mi>
+                                </msup>
+                            </mrow>
+                            <mrow>
+                                <mo>(</mo>
+                                <mi>True positives</mi>
+                                <mo>+</mo>
+                                <mi>False negatives</mi>
+                                <mo>)</mo>
+                            </mrow>
+                        </mfrac>
+                    </math>
+                    <li>
+                        <strong>F1 Score</strong>: harmonic mean of precision
+                        and recall.
+                        <math display="inline" class="formulas">
+                            <mtext>F1 Score = </mtext>
+                            <mfrac>
+                                <mrow>
+                                    <mn>2</mn><mo>&times;</mo><mi>Precision</mi><mo>&times;</mo><mi>Recall</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>Precision</mi><mo>+</mo><mi>Recall</mi>
+                                </mrow>
+                            </mfrac>
+                        </math>
+
+                    </li>
+                    <li><strong>Support</strong>: number of actual occurrences
+                        of each class in the dataset.</li>
+                    <li>
+                        <strong>Accuracy</strong>: measures the number of
+                        correctly classified instances over the total number of
+                        instances.
+                        <math display="inline" class="formulas">
+                            <mtext>Accuracy = </mtext>
+                            <mfrac>
+                                <mrow>
+                                    <mi>True positives</mi> <mo>+</mo> <mi>True
+                                        negatives</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>Total instances</mi>
+                                </mrow>
+                            </mfrac>
+                        </math>
+                    </li>
+                    <li><strong>Macro average</strong>: average of metrics
+                        across all classes, treating each class equally.
+                    </li>
+                    <li><strong>Weighted average</strong>: average of metrics
+                        across all classes, weighted by support.</li>
+                </ul>
+
+                <div class="model-performance">
+                    <h4><strong>Model Performance</strong></h4>
+                    <div class="model-result">
+                        <h4>Logistic Regression</h4>
+                        <div class="result-container">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>precision</th>
+                                    <th>recall</th>
+                                    <th>f1-score</th>
+                                    <th>support</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0.82</td>
+                                    <td>0.99</td>
+                                    <td>0.90</td>
+                                    <td>798</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0.63</td>
+                                    <td>0.09</td>
+                                    <td>0.16</td>
+                                    <td>185</td>
+                                </tr>
+                                <tr>
+                                    <td>accuracy</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0.82</td>
+                                    <td>983</td>
+                                </tr>
+                                <tr>
+                                    <td>macro avg</td>
+                                    <td>0.73</td>
+                                    <td>0.54</td>
+                                    <td>0.53</td>
+                                    <td>983</td>
+                                </tr>
+                                <tr>
+                                    <td>weighted avg</td>
+                                    <td>0.79</td>
+                                    <td>0.82</td>
+                                    <td>0.76</td>
+                                    <td>983</td>
+                                </tr>
+                            </table>
+                            <img src="media/roc_curve_figure_lr.png"
+                                alt="ROC Curve for Logistic Regression" />
+                        </div>
+                    </div>
+                    <div class="model-result">
+                        <h4>Support Vector Machine</h4>
+                        <div class="result-container">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>precision</th>
+                                    <th>recall</th>
+                                    <th>f1-score</th>
+                                    <th>support</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0.88</td>
+                                    <td>0.93</td>
+                                    <td>0.90</td>
+                                    <td>798</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0.00</td>
+                                    <td>0.00</td>
+                                    <td>0.00</td>
+                                    <td>185</td>
+                                </tr>
+                                <tr>
+                                    <td>accuracy</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0.81</td>
+                                    <td>983</td>
+                                </tr>
+                                <tr>
+                                    <td>macro avg</td>
+                                    <td>0.41</td>
+                                    <td>0.50</td>
+                                    <td>0.45</td>
+                                    <td>983</td>
+                                </tr>
+                                <tr>
+                                    <td>weighted avg</td>
+                                    <td>0.66</td>
+                                    <td>0.81</td>
+                                    <td>0.73</td>
+                                    <td>983</td>
+                                </tr>
+                            </table>
+                            <img src="media/roc_curve_figure_svm.png"
+                                alt="ROC Curve for SVM" />
+                        </div>
+                    </div>
+                    <div class="model-result">
+                        <h4>XGBoost</h4>
+                        <div class="result-container">
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>precision</th>
+                                    <th>recall</th>
+                                    <th>f1-score</th>
+                                    <th>support</th>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>0.81</td>
+                                    <td>1.00</td>
+                                    <td>0.90</td>
+                                    <td>798</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0.59</td>
+                                    <td>0.44</td>
+                                    <td>0.50</td>
+                                    <td>185</td>
+                                </tr>
+                                <tr>
+                                    <td>accuracy</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>0.84</td>
+                                    <td>983</td>
+                                </tr>
+                                <tr>
+                                    <td>macro avg</td>
+                                    <td>0.73</td>
+                                    <td>0.68</td>
+                                    <td>0.70</td>
+                                    <td>983</td>
+                                </tr>
+                                <tr>
+                                    <td>weighted avg</td>
+                                    <td>0.82</td>
+                                    <td>0.84</td>
+                                    <td>0.83</td>
+                                    <td>983</td>
+                                </tr>
+                            </table>
+                            <img src="media/roc_curve_figure_xgb.png"
+                                alt="ROC Curve for XGBoost" />
+                        </div>
+                    </div>
+                </div>
+                <p>Based on the results of our three models, all the accuracy
+                    scores of our models reached 80 percent or higher,
+                    indicating the models are performing well across both
+                    classes. This means that for a given set of data, our models
+                    can correctly identify whether a customer will default or
+                    not 80 percent of time. Additionally, based on the AUC
+                    score, the xgboost model has the best result. An AUC score,
+                    or Area Under the Receiver Operating Characteristic (ROC)
+                    Curve, of 0.87 indicates a high level of model performance
+                    in distinguishing between the positive class (e.g.,
+                    customers who will default) and the negative class (e.g.,
+                    customers who will not default). So there is an 87 percent
+                    chance that the model will be able to distinguish between a
+                    randomly chosen positive instance and a randomly chosen
+                    negative instance. This is considered to be a very good
+                    performance, indicating that the model has a high likelihood
+                    of correctly classifying customers who will default on loans
+                    versus those who will not.
+                </p>
             </section>
             <section id="discussion">
                 <h3>Discussion</h3>
@@ -224,27 +569,33 @@
         </main>
         <footer>
             <div class="footer-container">
-                <h3>Contacts: </h3>
+                <h3 id="contact">Contacts: </h3>
                 <div class="contact">
                     <div class="contact-links">
                         <p>Xuewen Yang</p>
-                        <a href="mailto:xuy001@ucsd.edu"><i>xuy001@ucsd.edu</i></a>
+                        <a
+                            href="mailto:xuy001@ucsd.edu"><i>xuy001@ucsd.edu</i></a>
                     </div>
                     <div class="contact-links">
                         <p>Haicheng Xu</p>
-                        <a href="mailto:hax004@ucsd.edu"><i>hax004@ucsd.edu</i></a>
+                        <a
+                            href="mailto:hax004@ucsd.edu"><i>hax004@ucsd.edu</i></a>
                     </div>
                     <div class="contact-links">
                         <p>Jessica Guzman</p>
-                        <a href="mailto:jeguzman@ucsd.edu"><i>jeguzman@ucsd.edu</i></a>
+                        <a
+                            href="mailto:jeguzman@ucsd.edu"><i>jeguzman@ucsd.edu</i></a>
                     </div>
                     <div class="contact-links">
                         <p>Kuangyu Zou</p>
                         <a href="mailto:kzou@ucsd.edu"><i>kzou@ucsd.edu</i></a>
                     </div>
                 </div>
-                <p>This page was generated by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
-                <p>&copy; 2024 Kuangyu, Jessica, Haicheng, and Xuewen. All rights reserved.</p>
+                <p>This page was generated by <a
+                        href="https://pages.github.com/" target="_blank">GitHub
+                        Pages</a></p>
+                <p>&copy; 2024 Xuewen, Kuangyu, Jessica, and Haicheng. All
+                    rights reserved.</p>
             </div>
         </footer>
     </body>
