@@ -147,7 +147,7 @@ main section {
     > h4::after {
         content: "";
         display: block;
-        width: 20%;
+        width: 60%;
         height: 2px;
         background-color: rgb(17, 142, 164);
         margin: 2px 0;
@@ -179,7 +179,6 @@ main section {
 }
 
 .model-performance > h4 {
-    text-align: center;
     font-size: 2rem;
     margin: 1rem 0;
 }
@@ -258,6 +257,13 @@ main section {
             border-radius: 0 5px 5px 5px;
             margin-top: 0;
             font-size: 0.9rem;
+            a {
+                text-decoration: none;
+                color: rgb(35, 103, 125);
+            }
+            a:hover {
+                text-decoration: underline;
+            }
         }
         &[open] summary {
             border-radius: 5px 5px 0 0;
@@ -353,15 +359,6 @@ footer {
         align-self: center; 
     }
 
-    .roc-graph {
-        display: flex;
-        flex-direction: column;
-        > img {
-            margin: auto;
-            max-width: 100%;
-        }
-    }
-
     .links {
         flex-direction: column;
         align-items: center;
@@ -369,6 +366,51 @@ footer {
 
     .resource-links {
         margin: 0.1rem 0;
+    }
+
+    .model-performance > h4 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .model-result {
+        h4 {
+            font-size: 0.8rem;
+        }
+    }
+
+    .result-container {
+        display: flex;
+        flex-direction: column;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .result-container table {
+        max-width: 80%;
+        border-collapse: collapse;
+        margin-top: 5px;
+        font-size: 12px;
+        th, td {
+            padding: 3px;
+        }
+    }
+
+    .metrics {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .formulas {
+        
+        margin-right: 0;
+        mfrac{
+            margin-left: 0.2rem;
+        }
+        mrow {
+            margin: 0.2rem 0
+        }
     }
 }
 
@@ -406,6 +448,28 @@ footer {
     main section img {
         width: 70%;
         align-self: center; 
+    }
+    
+    .model-performance > h4 {
+        font-size: 1.5rem;
+    }
+
+    .result-container {
+        display: flex;
+        flex-direction: column;
+        img {
+            max-width: 80%;
+        }
+    }
+
+    .result-container table {
+        max-width: 80%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        font-size: 12px;
+        th, td {
+            padding: 4px;
+        }
     }
 
     .footer-container {
