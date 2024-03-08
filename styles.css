@@ -166,6 +166,7 @@ main section {
 .formulas {
     color: rgb(26, 143, 88);
     font-weight: bold;
+    margin-right: 14rem;
     mfrac{
         margin-left: 0.2rem;
     }
