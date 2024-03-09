@@ -179,6 +179,7 @@ main section {
 }
 
 .model-performance > h4 {
+    text-align: center;
     font-size: 2rem;
     margin: 1rem 0;
 }
@@ -451,6 +452,7 @@ footer {
     }
     
     .model-performance > h4 {
+        text-align: center;
         font-size: 1.5rem;
     }
 
