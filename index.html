@@ -231,38 +231,45 @@
                 </div>
                 <div class="method">
                     <h4>Feature Selection and Models</h4>
-                    <p>placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder placeholder
-                        placeholder placeholder placeholder</p>
+                    <p>In refining our feature set for optimal model performance, 
+                       we started with 132 features and streamlined them using exclusion 
+                       criteria to remove bias-related features, such as those involving 
+                       sensitive healthcare information. We assessed the importance of the 
+                       remaining features differently for each model: logistic regression 
+                       and SVM models were evaluated by their coefficients, while XGBoost 
+                       used its feature importance function. Through cross-validation and 
+                       iterative analysis, we identified and retained the most impactful 
+                       features, enhancing the model's predictive capability.
+                    </p>
                     <img src="media/feature_selection.jpg"
                         alt="Feature Selection" />
                     <div class="dropdown-menu">
                         <details class="model-detail">
                             <summary>Logistic Regression</summary>
-                            <p><a href="https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/">Logistic Regression</a>placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder</p>
+                            <p><a href="https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/">Logistic Regression</a>
+                                The Logistic Regression serves as our baseline for predicting customer default outcomes, 
+                                chosen for its aptness in binary classification tasks and flexibility across various types 
+                                of independent variables. Feature selection is performed as described earlier, followed by 
+                                model training and evaluation on a stratified train-test split to assess performance metrics 
+                                like accuracy and AUC score.
+                            </p>
                         </details>
                         <details class="model-detail">
                             <summary>Support Vector Machine</summary>
-                            <p><a href="https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/">Support Vector Machine</a>placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder</p>
+                            <p><a href="https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/">Support Vector Machine</a>
+                                We then explore the Support Vector Machine (SVM) model, recognized for its proficiency 
+                                in high-dimensional spaces, such as text classification. The approach mirrors that of 
+                                Logistic Regression, focusing on feature importance for model training and performance evaluation.
+                            </p>
                         </details>
                         <details class="model-detail">
                             <summary>XGBoost</summary>
-                            <p><a href="https://www.nvidia.com/en-us/glossary/xgboost/">XGBoost</a> placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder placeholder
-                                placeholder placeholder placeholder</p>
+                            <p><a href="https://www.nvidia.com/en-us/glossary/xgboost/">XGBoost</a>
+                                we focus on XGBoost, celebrated for its prowess with complex datasets and high accuracy across diverse data types. 
+                                This makes it an excellent choice for our default prediction task. Our approach with XGBoost mirrors earlier models, 
+                                starting with feature selection guided by the model's feature importance. We then train and evaluate XGBoost on the 
+                                selected features, using metrics like accuracy, AUC score, and classification reports for performance assessment.
+                            </p>
                         </details>
                     </div>
                 </div>
