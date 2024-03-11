@@ -138,12 +138,27 @@ main section {
         width: 60%;
         align-self: center; 
     }
+    > h3 {
+        font-family: "Tilt Warp", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-size: 1.5rem;
+        font-style: normal;
+        color: rgb(26, 89, 110);
+    }
 }
 
 .method {
     margin: 2rem 0 2rem 1rem;
     display: flex;
     flex-direction: column;
+    > h4 {
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: rgb(26, 89, 110);
+    }
     > h4::after {
         content: "";
         display: block;
@@ -177,7 +192,10 @@ main section {
 }
 
 .formulas {
-    color: rgb(26, 143, 88);
+    font-family: "Tilt Warp", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: rgb(26, 89, 110);
     font-weight: bold;
     margin-right: 14rem;
     mfrac{
@@ -250,6 +268,15 @@ main section {
         border-radius: 10px;
         max-width: 500px;
         > summary  {
+            font-family: "Tilt Warp", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+
+            font-family: "Red Hat Display", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-weight: bold;
             font-size: 0.8rem;
             display: inline-block;
             background-color: rgb(44, 131, 160);
