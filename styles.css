@@ -70,16 +70,6 @@ header nav {
     }
 }
 
-/* .institutions {
-    font-size: 1rem;
-    > p {
-        > a {
-            text-decoration: none;
-            color: rgb(9, 64, 82);
-        }
-    }
-} */
-
 .links {
     display: flex;
     flex-direction: row;
@@ -168,7 +158,7 @@ main section {
         margin: 2px 0;
     }
     > img {
-        width: 80%;
+        width: 100%;
         align-self: center; 
         margin: 1rem 0;
     }
@@ -395,8 +385,7 @@ footer {
     }
 
     .model-performance > h4 {
-        text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .model-result {
@@ -415,31 +404,15 @@ footer {
     }
 
     .result-container table {
-        /* max-width: 80%;
-        border-collapse: collapse;
-        margin-top: 5px;
-        font-size: 12px;
-         */
         font-size: 12px;
         th, td {
             padding: 3px;
         }
+        max-width: 100%;
     }
 
     .metrics {
-        /* margin-left: 1rem; */
         font-size: 0.8rem;
-    }
-
-    .formulas {
-        
-        margin-right: 0;
-        mfrac{
-            margin-left: 0.2rem;
-        }
-        mrow {
-            margin: 0.2rem 0
-        }
     }
 }
 
@@ -474,27 +447,22 @@ footer {
         padding: 0 2rem;
     }
 
-    main section img {
-        width: 70%;
-        align-self: center; 
-    }
     
     .model-performance > h4 {
-        text-align: center;
         font-size: 1.5rem;
     }
 
     .result-container {
         display: flex;
         flex-direction: column;
-        img {
-            max-width: 80%;
-        }
+    }
+
+    .result-container img {
+        width: 100%;
     }
 
     .result-container table {
         max-width: 80%;
-        border-collapse: collapse;
         margin-top: 2rem;
         font-size: 12px;
         th, td {
