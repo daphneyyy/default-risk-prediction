@@ -5,10 +5,7 @@
         <title>Scoring Risk of Default</title>
         <meta name="description"
             content="2024 UC San Diego Data Science Capstone Project, written by Section B18 Group 2.">
-        <meta name="author" content="Jessica Guzman">
-        <meta name="author" content="Kuangyu Zou">
-        <meta name="author" content="Xuewen Yang">
-        <meta name="author" content="Haicheng Xu">
+        <meta name="author" content="Jessica Guzman, Kuangyu Zou, Xuewen Yang, Haicheng Xu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,16 +20,6 @@
             <h1>Credit Score Alternative</h1>
             <h2>Scoring Risk of Default Using Banking Transaction Data</h2>
             <div class="authors">
-                <!-- <p>By:
-                    <a href="https://github.com/je-guz">Jessica
-                        Guzman</a><sup>1,2</sup>,
-                    <a href="https://github.com/Xu-Haicheng">Haicheng
-                        Xu</a><sup>1,3</sup>,
-                    <a href="https://github.com/daphneyyy">Xuewen
-                        Yang</a><sup>1,2</sup>, and
-                    <a href="https://github.com/KuangyuZou">Kuangyu
-                        Zou</a><sup>1,2</sup>.
-                </p> -->
                 <p>By:
                     <a href="https://github.com/je-guz">Jessica
                         Guzman</a>,
@@ -50,19 +37,12 @@
                     <a href="https://www.berkustun.com/">Berk Ustun (UCSD)</a>.
                 </p>
             </div>
-            <!-- <div class="institutions">
-                <p><sup>1</sup><a href="https://datascience.ucsd.edu/">Hal&#305;c&#305;o&gbreve;lu Data Science Institute,
-                    UC San Diego</a></p>
-                <p><sup>2</sup><a href="https://math.ucsd.edu/">Department of Mathematics, UC San Diego</a></p>
-                <p><sup>3</sup><a href="https://economics.ucsd.edu/">Department of Economics, UC San Diego</a></p>
-                <p><sup>4</sup><a href="https://www.prismdata.com/">Prism Data, Inc.</a></p>
-            </div> -->
             <div class="links">
                 <a href="https://github.com/daphneyyy/dsc-capstone-project"
-                    class="resource-links" target="_blank">View Code</a>
-                <a href="media/B18-2.pdf" class="resource-links" target="_blank">View
+                    class="resource-links" target="_blank" rel="noopener noreferrer">View Code</a>
+                <a href="media/B18-2.pdf" class="resource-links" target="_blank" rel="noopener noreferrer">View
                     Poster</a>
-                <a href="#" class="resource-links" target="_blank">View
+                <a href="#" class="resource-links" target="_blank" rel="noopener noreferrer">View
                     Report</a>
             </div>
             <nav>
@@ -380,91 +360,6 @@
                     </tbody>
                 </table>
 
-                
-<!--                 <ul class="metrics">
-                    <li>
-                        <strong>Precision</strong>: measures the percentage of
-                        predictions made by the model that are correct.
-                        <math display="block" class="formulas">
-                            <mtext>Precision = </mtext>
-                            <mfrac>
-                                <mrow>
-                                    <msup>
-                                        <mi>True positives</mi>
-                                    </msup>
-                                </mrow>
-                                <mrow>
-                                    <mo>(</mo>
-                                    <mi>True positives</mi>
-                                    <mo>+</mo>
-                                    <mi>False positives</mi>
-                                    <mo>)</mo>
-                                </mrow>
-                            </mfrac>
-                        </math>
-                    </li>
-                    <li><strong>Recall</strong>: measures the percentage of
-                        relevant data points that were correctly identified by
-                        the model.</li>
-                    <math display="block" class="formulas">
-                        <mtext>Recall = </mtext>
-                        <mfrac>
-                            <mrow>
-                                <msup>
-                                    <mi>True positives</mi>
-                                </msup>
-                            </mrow>
-                            <mrow>
-                                <mo>(</mo>
-                                <mi>True positives</mi>
-                                <mo>+</mo>
-                                <mi>False negatives</mi>
-                                <mo>)</mo>
-                            </mrow>
-                        </mfrac>
-                    </math>
-                    <li>
-                        <strong>F1 Score</strong>: harmonic mean of precision
-                        and recall.
-                        <math display="block" class="formulas">
-                            <mtext>F1 Score = </mtext>
-                            <mfrac>
-                                <mrow>
-                                    <mn>2</mn><mo>&times;</mo><mi>Precision</mi><mo>&times;</mo><mi>Recall</mi>
-                                </mrow>
-                                <mrow>
-                                    <mi>Precision</mi><mo>+</mo><mi>Recall</mi>
-                                </mrow>
-                            </mfrac>
-                        </math>
-
-                    </li>
-                    <li><strong>Support</strong>: number of actual occurrences
-                        of each class in the dataset.</li>
-                    <li>
-                        <strong>Accuracy</strong>: measures the number of
-                        correctly classified instances over the total number of
-                        instances.
-                        <math display="block" class="formulas">
-                            <mtext>Accuracy = </mtext>
-                            <mfrac>
-                                <mrow>
-                                    <mi>True positives</mi> <mo>+</mo> <mi>True
-                                        negatives</mi>
-                                </mrow>
-                                <mrow>
-                                    <mi>Total instances</mi>
-                                </mrow>
-                            </mfrac>
-                        </math>
-                    </li>
-                    <li><strong>Macro average</strong>: average of metrics
-                        across all classes, treating each class equally.
-                    </li>
-                    <li><strong>Weighted average</strong>: average of metrics
-                        across all classes, weighted by support.</li>
-                </ul> -->
-
                 <div class="model-performance">
                     <h4>Model Performance</h4>
                     <div class="model-result">
@@ -651,7 +546,7 @@
                 <p>By leveraging transaction data from user accounts, we broaden the scope of potential borrowers we can cater to, all while striving for the most accurate distinction between sound and risky loans. Significantly, we also try to adhere to strict ethical standards, refraining from utilizing features that could lead to discrimination against protected classes. We also attempted to avoid indirect discrimination by normalizing and analyzing users' transaction histories against themselves. In summary, our model expands access to the market ethically, accommodating a broader range of users, while concurrently optimizing loan quality by emphasizing good loans and mitigating the risk of bad ones. Overall, our model promotes financial justice and ethical decision-making while guaranteeing inclusion without sacrificing the integrity of our lending operations.
                 </p>
             </section>
-            <a href="#" id="top-btn">Go To Top &uarr;</a>
+            <a href="#" aria-label="Go to top of the page" id="top-btn">Go To Top &uarr;</a>
         </main>
         <footer>
             <div class="footer-container">

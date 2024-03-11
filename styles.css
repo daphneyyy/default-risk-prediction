@@ -175,10 +175,10 @@ main section {
 }
 
 .metrics {
-    margin-left: 4rem;
     border-collapse: collapse;
     width: 80%;
     margin: 20px auto;
+    font-size: 14px;
 }
 
 .metrics th, .metrics td {
@@ -192,12 +192,10 @@ main section {
 }
 
 .formulas {
-    font-family: "Tilt Warp", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
     color: rgb(26, 89, 110);
-    font-weight: bold;
-    margin-right: 14rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     mfrac{
         margin-left: 0.2rem;
     }
@@ -263,73 +261,60 @@ main section {
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
-    > details {
-        margin: 0.3rem 0;
-        border-radius: 10px;
-        max-width: 500px;
-        > summary  {
-            font-family: "Tilt Warp", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-
-            font-family: "Red Hat Display", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 500;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 0.8rem;
-            display: inline-block;
-            background-color: rgb(44, 131, 160);
-            border-radius: 5px;
-            cursor: pointer;
-            padding: 10px;
-            color: white;
-            &::before {
-                content: "\25B6";
-                width: 0.5rem;
-                height: 0.5rem;
-                color: white;
-                margin-right: 0.2rem;
-            }
-        }
-        > p {
-            padding: 10px;
-            background-color: #e4eaef;
-            border-radius: 0 5px 5px 5px;
-            margin-top: 0;
-            font-size: 0.9rem;
-            a {
-                text-decoration: none;
-                color: rgb(35, 103, 125);
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-        }
-        &[open] summary {
-            border-radius: 5px 5px 0 0;
-            &::before {
-                content: "\25BC";
-                width: 0.5rem;
-                height: 0.5rem;
-                color: white;
-                margin-right: 0.2rem;
-            }
-        }
-        &[open] p {
-            display: block;
-        }
-    }
 }
 
-/* .roc-graph {
-    display: flex;
-    justify-content: center;
-    > img {
-        margin: auto;
-        max-width: 32%;
+.model-detail {
+    margin: 0.3rem 0;
+    border-radius: 10px;
+    max-width: 500px;
+    > summary  {
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 0.8rem;
+        display: inline-block;
+        background-color: rgb(44, 131, 160);
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px;
+        color: white;
+        &::before {
+            content: "\25B6";
+            width: 0.5rem;
+            height: 0.5rem;
+            color: white;
+            margin-right: 0.2rem;
+        }
     }
-} */
+    > p {
+        padding: 10px;
+        background-color: #e4eaef;
+        border-radius: 0 5px 5px 5px;
+        margin-top: 0;
+        font-size: 0.9rem;
+        a {
+            text-decoration: none;
+            color: rgb(35, 103, 125);
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    &[open] summary {
+        border-radius: 5px 5px 0 0;
+        &::before {
+            content: "\25BC";
+            width: 0.5rem;
+            height: 0.5rem;
+            color: white;
+            margin-right: 0.2rem;
+        }
+    }
+    &[open] p {
+        display: block;
+    }
+}
 
 #top-btn {
     position: fixed;
@@ -423,15 +408,18 @@ footer {
     .result-container {
         display: flex;
         flex-direction: column;
-        img {
-            max-width: 100%;
-        }
+    }
+
+    .result-container img {
+        max-width: 100%;
     }
 
     .result-container table {
-        max-width: 80%;
+        /* max-width: 80%;
         border-collapse: collapse;
         margin-top: 5px;
+        font-size: 12px;
+         */
         font-size: 12px;
         th, td {
             padding: 3px;
@@ -439,7 +427,7 @@ footer {
     }
 
     .metrics {
-        margin-left: 1rem;
+        /* margin-left: 1rem; */
         font-size: 0.8rem;
     }
 
