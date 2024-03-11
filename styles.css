@@ -158,7 +158,7 @@ main section {
         margin: 2px 0;
     }
     > img {
-        width: 100%;
+        width: 70%;
         align-self: center; 
         margin: 1rem 0;
     }
@@ -253,56 +253,53 @@ main section {
     margin-top: 0.5rem;
 }
 
-.model-detail {
-    margin: 0.3rem 0;
-    border-radius: 10px;
-    max-width: 500px;
+.feature-detail {
+    margin: 0 0 0.5rem 1rem;
+    border:rgb(44, 131, 160) solid 1px;
+    border-radius: 5px;
+    padding: 1rem;
     > summary  {
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 0.8rem;
-        display: inline-block;
-        background-color: rgb(44, 131, 160);
-        border-radius: 5px;
+        font-weight: 300;
+        color: rgb(44, 131, 160);
         cursor: pointer;
         padding: 10px;
-        color: white;
-        &::before {
-            content: "\25B6";
-            width: 0.5rem;
-            height: 0.5rem;
-            color: white;
-            margin-right: 0.2rem;
-        }
     }
     > p {
         padding: 10px;
-        background-color: #e4eaef;
-        border-radius: 0 5px 5px 5px;
+        display: block;
         margin-top: 0;
-        font-size: 0.9rem;
-        a {
-            text-decoration: none;
-            color: rgb(35, 103, 125);
-        }
-        a:hover {
-            text-decoration: underline;
-        }
     }
     &[open] summary {
-        border-radius: 5px 5px 0 0;
-        &::before {
-            content: "\25BC";
-            width: 0.5rem;
-            height: 0.5rem;
-            color: white;
-            margin-right: 0.2rem;
-        }
+        font-style: bold;
     }
-    &[open] p {
-        display: block;
+}
+
+.models {
+    > li {
+        list-style-type: none;
+        margin: 0 0 0.5rem 1rem;
+        border:rgb(44, 131, 160) solid 1px;
+        border-radius: 5px;
+        padding: 1rem;
+        > p {
+            font-size: larger;
+            font-weight: 300;
+            font-style: italic;
+            color: rgb(44, 131, 160);
+        }
+        > ul li {
+            list-style-type: none;
+            padding: 10px;
+            margin-top: 0;
+            font-size: 0.9rem;
+            a {
+                text-decoration: none;
+                color: rgb(44, 131, 160);
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -413,6 +410,11 @@ footer {
 
     .metrics {
         font-size: 0.8rem;
+    }
+
+
+    .method > img {
+        width: 100%;
     }
 }
 
