@@ -266,8 +266,112 @@
             </section>
             <section id="results">
                 <h3>Results</h3>
+
+                <table class="metrics">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Definition</th>
+                            <th>Formula</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Precision</td>
+                            <td>Measures the percentage of predictions made by the model that are correct.</td>
+                            <td>
+                                <math display="inline" class="formulas">
+                                    <mfrac>
+                                        <mrow>
+                                            <msup>
+                                                <mi>True positives</mi>
+                                            </msup>
+                                        </mrow>
+                                        <mrow>
+                                            <mo>(</mo>
+                                            <mi>True positives</mi>
+                                            <mo>+</mo>
+                                            <mi>False positives</mi>
+                                            <mo>)</mo>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Recall</td>
+                            <td>Measures the percentage of relevant data points that were correctly identified by the model.</td>
+                            <td>
+                                <math display="inline" class="formulas">
+                                    <mfrac>
+                                        <mrow>
+                                            <msup>
+                                                <mi>True positives</mi>
+                                            </msup>
+                                        </mrow>
+                                        <mrow>
+                                            <mo>(</mo>
+                                            <mi>True positives</mi>
+                                            <mo>+</mo>
+                                            <mi>False negatives</mi>
+                                            <mo>)</mo>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>F1 Score</td>
+                            <td>Harmonic mean of precision and recall.</td>
+                            <td>
+                                <math display="inline" class="formulas">
+                                    <mfrac>
+                                        <mrow>
+                                            <mn>2</mn><mo>&times;</mo><mi>Precision</mi><mo>&times;</mo><mi>Recall</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>Precision</mi><mo>+</mo><mi>Recall</mi>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Number of actual occurrences of each class in the dataset.</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Accuracy</td>
+                            <td>Measures the number of correctly classified instances over the total number of instances.</td>
+                            <td>
+                                <math display="inline" class="formulas">
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>True positives</mi> <mo>+</mo> <mi>True negatives</mi>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>Total instances</mi>
+                                        </mrow>
+                                    </mfrac>
+                                </math>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Macro average</td>
+                            <td>Average of metrics across all classes, treating each class equally.</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Weighted average</td>
+                            <td>Average of metrics across all classes, weighted by support.</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 
-                <ul class="metrics">
+<!--                 <ul class="metrics">
                     <li>
                         <strong>Precision</strong>: measures the percentage of
                         predictions made by the model that are correct.
@@ -349,7 +453,7 @@
                     </li>
                     <li><strong>Weighted average</strong>: average of metrics
                         across all classes, weighted by support.</li>
-                </ul>
+                </ul> -->
 
                 <div class="model-performance">
                     <h4><strong>Model Performance</strong></h4>
