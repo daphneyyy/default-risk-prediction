@@ -161,6 +161,19 @@ main section {
 
 .metrics {
     margin-left: 4rem;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.metrics th, .metrics td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.metrics th {
+    background-color: #f2f2f2;
 }
 
 .formulas {
