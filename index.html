@@ -141,23 +141,36 @@
                         </details>
                         <details class="feature-detail">
                             <summary>Exponential moving average of standardized balance</summary>
-                            <p>TBD</p>
+                            <p style="font-family: 'Courier New', monospace;">
+                                EMA<sub>t</sub> = (&alpha; &times; Balance<sub>t</sub>) + ((1 - &alpha;) &times; EMA<sub>t-1</sub>)
+                            </p>
+                            <p> In this formula:</p>
+                            <ul id="ema-formula">
+                                <li><strong>Balance<sub>t</sub>:</strong> Standardized balance amount for current window.</li>
+                                <li><strong>&alpha;:</strong> Factor for degree of exponential weighting given to recent observations. 
+                                <li><strong>EMA<sub>t-1</sub>:</strong> Exponential Weighted Moving Average value from previous window</li>
+                            </ul>
+                            <p>We found all the EMA's calculated with a window size of two months for the most recent 7 months of data by account type. </p>
                         </details>
                         <details class="feature-detail">
                             <summary>Probability of Default by % Spent of Income by Category of Outflow</summary>
-                            <p>TBD</p>
+                            <p>We calculated the proportion spent of income by category of outflow, and then applied logistic regression to find the probability of default.
+                            </p>
                         </details>
                         <details class="feature-detail">
                             <summary>Probability of Default by % Spent of Inflow by Category of Outflow</summary>
-                            <p>TBD</p>
+                            <p>We calculated the proportion spent of inflow by category of outflow, and then applied logistic regression to find the probability of default.
+                            </p>
                         </details>
                         <details class="feature-detail">
                             <summary>% of Inflow by Inflow Category </summary>
-                            <p>TBD</p>
+                            <p>We calculated the proportion of inflow that came from each inflow category. 
+                            </p>
                         </details>
                         <details class="feature-detail">
                             <summary>Account Type Count</summary>
-                            <p>TBD</p>
+                            <p>We count the number of accounts for each account type users have. 
+                            </p>
                         </details>
                     </div>
                 </div>
@@ -191,7 +204,7 @@
                         </li>
                         <li><p>XGBoost</p>
                             <ul>
-                                <li>we focus on <a href="https://www.nvidia.com/en-us/glossary/xgboost/">XGBoost</a>, celebrated for its prowess with complex datasets and high accuracy across diverse data types. This makes it an excellent choice for our default prediction task. Our approach with XGBoost mirrors earlier models, starting with feature selection guided by the model's feature importance. We then train and evaluate XGBoost on the selected features, using metrics like accuracy, AUC score, and classification reports for performance assessment.</li>
+                                <li>We focus on <a href="https://www.nvidia.com/en-us/glossary/xgboost/">XGBoost</a>, celebrated for its prowess with complex datasets and high accuracy across diverse data types. This makes it an excellent choice for our default prediction task. Our approach with XGBoost mirrors earlier models, starting with feature selection guided by the model's feature importance. We then train and evaluate XGBoost on the selected features, using metrics like accuracy, AUC score, and classification reports for performance assessment.</li>
                             </ul>
                         </li>
                     </ul>
@@ -212,7 +225,7 @@
                         <tr>
                             <td>Precision</td>
                             <td>Measures the percentage of predictions made by the model that are correct.</td>
-                            <td>
+                            <td>                                
                                 <math display="inline" class="formulas">
                                     <mfrac>
                                         <mrow>
