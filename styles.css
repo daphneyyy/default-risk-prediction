@@ -309,6 +309,32 @@ main section {
     }
 }
 
+.output {
+    > li {
+        list-style-type: none;
+        margin: 0 0 0.5rem 1rem;
+        border:rgb(44, 131, 160) solid 1px;
+        border-radius: 5px;
+        padding: 1rem;
+        > p {
+            font-size: larger;
+            font-weight: 300;
+            font-style: italic;
+            color: rgb(44, 131, 160);
+        }
+        > ul li {
+            list-style-type: none;
+            padding: 10px;
+            margin-top: 0;
+            font-size: 0.9rem;
+            img {
+                max-width: 100%;
+                padding: 0;
+            }
+        }
+    }
+}
+
 #top-btn {
     position: fixed;
     bottom: 4rem;
