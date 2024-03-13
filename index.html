@@ -504,19 +504,20 @@
                 <h3>Model Output</h3>
                 <ul class="models">
                         <li>
-                            <p>Logistic Regression</p>
+                            <p>Default Probability of Each Borrower</p>
                             <ul>
-                                <li>The <a href="https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/">Logistic Regression</a> serves as our baseline for predicting customer default outcomes, chosen for its aptness in binary classification tasks and flexibility across various types of independent variables. Feature selection is performed as described earlier, followed by model training and evaluation on a stratified train-test split to assess performance metrics  like accuracy and AUC score.</li>
+                                <li>The <a href="https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/">Logistic Regression</a> 
+                                    serves as our baseline for predicting customer default outcomes, chosen for its aptness in binary classification tasks and 
+                                    flexibility across various types of independent variables. Feature selection is performed as described earlier, followed by model 
+                                    training and evaluation on a stratified train-test split to assess performance metrics  like accuracy and AUC score.</li>
                             </ul>
                         </li>
-                        <li><p>Support Vector Machine</p>
+                        <li>
+                            <p>Top 3 Reasons for Predicting "Default" for a Particular Borrower</p>
                             <ul>
-                                <li>We then explore the <a href="https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/">Support Vector Machine</a> (SVM) model, recognized for its proficiency in high-dimensional spaces, such as text classification. The approach mirrors that of Logistic Regression, focusing on feature importance for model training and performance evaluation.</li>
-                            </ul>
-                        </li>
-                        <li><p>XGBoost</p>
-                            <ul>
-                                <li>We focus on <a href="https://www.nvidia.com/en-us/glossary/xgboost/">XGBoost</a>, celebrated for its prowess with complex datasets and high accuracy across diverse data types. This makes it an excellent choice for our default prediction task. Our approach with XGBoost mirrors earlier models, starting with feature selection guided by the model's feature importance. We then train and evaluate XGBoost on the selected features, using metrics like accuracy, AUC score, and classification reports for performance assessment.</li>
+                                <li>We then explore the <a href="https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/">Support Vector Machine</a> (SVM)
+                                    model, recognized for its proficiency in high-dimensional spaces, such as text classification. The approach mirrors that of Logistic Regression, focusing on feature 
+                                    importance for model training and performance evaluation.</li>
                             </ul>
                         </li>
                     </ul>
