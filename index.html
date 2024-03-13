@@ -506,26 +506,17 @@
                         <li>
                             <p>Default Probability of Each Borrower</p>
                             <ul>
-                                <li>The <a href="https://www.spiceworks.com/tech/artificial-intelligence/articles/what-is-logistic-regression/">Logistic Regression</a> 
-                                    serves as our baseline for predicting customer default outcomes, chosen for its aptness in binary classification tasks and 
-                                    flexibility across various types of independent variables. Feature selection is performed as described earlier, followed by model 
-                                    training and evaluation on a stratified train-test split to assess performance metrics  like accuracy and AUC score.</li>
+                                <li>We assign each user a probability of default score from 0 to 1. </li>
                             </ul>
                         </li>
                         <li>
                             <p>Top 3 Reasons for Predicting "Default" for a Particular Borrower</p>
                             <ul>
-                                <li>We then explore the <a href="https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/">Support Vector Machine</a> (SVM)
-                                    model, recognized for its proficiency in high-dimensional spaces, such as text classification. The approach mirrors that of Logistic Regression, focusing on feature 
-                                    importance for model training and performance evaluation.</li>
+                                <li>We can also provide the top 3 reasons why any given candidate
+                                    might raise concerns for defaulting based on the model</li>
                             </ul>
                         </li>
                     </ul>
-            </section>
-            <section id="contribution">
-                <h3>Contributions Beyond</h3>
-                <p>By leveraging transaction data from user accounts, we broaden the scope of potential borrowers we can cater to, all while striving for the most accurate distinction between sound and risky loans. Significantly, we also try to adhere to strict ethical standards, refraining from utilizing features that could lead to discrimination against protected classes. We also attempted to avoid indirect discrimination by normalizing and analyzing users' transaction histories against themselves. In summary, our model expands access to the market ethically, accommodating a broader range of users, while concurrently optimizing loan quality by emphasizing good loans and mitigating the risk of bad ones. Overall, our model promotes financial justice and ethical decision-making while guaranteeing inclusion without sacrificing the integrity of our lending operations.
-                </p>
             </section>
             
             <section id="discussion">
