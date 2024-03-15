@@ -21,28 +21,28 @@
             <h2>Scoring Risk of Default Using Banking Transaction Data</h2>
             <div class="authors">
                 <p>By:
-                    <a href="https://github.com/je-guz">Jessica
+                    <a href="https://github.com/je-guz" target="_blank">Jessica
                         Guzman</a>,
-                    <a href="https://github.com/Xu-Haicheng">Haicheng (Kevin)
+                    <a href="https://github.com/Xu-Haicheng" target="_blank">Haicheng (Kevin)
                         Xu</a>,
-                    <a href="https://github.com/daphneyyy">Xuewen (Daphne)
+                    <a href="https://github.com/daphneyyy" target="_blank">Xuewen (Daphne)
                         Yang</a>, and
-                    <a href="https://github.com/KuangyuZou">Kuangyu (Connie)
+                    <a href="https://github.com/KuangyuZou" target="_blank">Kuangyu (Connie)
                         Zou</a>.
                 </p>
                 <p>Mentors:
                     <a
-                        href="https://www.linkedin.com/in/brian-duke-07666a8/">Brian
+                        href="https://www.linkedin.com/in/brian-duke-07666a8/" target="_blank">Brian
                         Duke (Prism Data, Inc.)</a> and
-                    <a href="https://www.berkustun.com/">Berk Ustun (UCSD)</a>.
+                    <a href="https://www.berkustun.com/" target="_blank">Berk Ustun (UCSD)</a>.
                 </p>
             </div>
             <div class="links">
                 <a href="https://github.com/daphneyyy/dsc-capstone-project"
                     class="resource-links" target="_blank" rel="noopener noreferrer">View Code</a>
-                <a href="media/B18-2.pdf" class="resource-links" target="_blank" rel="noopener noreferrer">View
+                <a href="document/poster.pdf" class="resource-links" target="_blank" rel="noopener noreferrer">View
                     Poster</a>
-                <a href="#" class="resource-links" target="_blank" rel="noopener noreferrer">View
+                <a href="document/report.pdf" class="resource-links" target="_blank" rel="noopener noreferrer">View
                     Report</a>
             </div>
             <nav>
@@ -51,8 +51,9 @@
                     <li><a href="#introduction">Introduction</a></li>
                     <li><a href="#methods">Methods</a></li>
                     <li><a href="#results">Results</a></li>
+                    <li><a href="#model-output">Output</a></li>
                     <li><a href="#discussion">Discussion</a></li>
-                    <li><a href="#references">References</a></li>
+                    <li><a href="#contribution">Contribution</a></li>
                     <li><a href="#contact">Contacts</a></li>
                 </ul>
             </nav>
@@ -61,38 +62,12 @@
         <main>
             <section id="abstract">
                 <h3>Abstract</h3>
-                <p>In the current dynamic economic landscape, financial
-                    institutions are increasingly harnessing the power of
-                    machine learning to predict the risk of customer default.
-                    The income, balance, and transaction category are three
-                    important key factors correlated to the credit risk for each
-                    customer. In this paper, we aim to develop a model that
-                    combines all features related to these three aspects to
-                    predict whether the customer will default their money to
-                    banking. </p>
+                <p>Within the realm of financial lending, the FICO score has long served as the primary tool for assessing potential borrowers. In this paper, we suggest leveraging the capabilities of machine learning alongside borrowers' transactional data to forecast the likelihood of customer default. Specifically, income, balance, and transaction category emerge as pivotal factors correlated with credit risk for each individual. This paper aims to construct a model that integrates all these features and combinations therein to anticipate whether a customer is likely to default on their banking transactions.
+                </p>
             </section>
             <section id="introduction">
                 <h3>Introduction</h3>
-                <p>Predicting the credit risk score for customers is crucial for
-                    financial institutions to maintain a safe and organized
-                    environment. When it comes to credit risk analysis in
-                    particular, financial institutions tend to have access to
-                    multitudes of important user data, but using it to
-                    accurately and efficiently predict risk can become difficult
-                    based on the data structure. In this project, we will focus
-                    on combining customers' income, balance, and transaction
-                    category information to create features that help the model
-                    predict the default probabilities for each customer. For the
-                    income features, we relate to income estimation work that we
-                    did in Quarter 1 to estimate the outflow category spending
-                    of income percentage. For the balance feature, we calculate
-                    the cumulative balance sum and use the balance regression
-                    coefficient as a threshold. For the transaction features, we
-                    calculate the customer's percentage spent by both the inflow
-                    and outflow categories. Additionally, we also define a
-                    feature that correlates to the account type since different
-                    account type has different inflow and outflow amounts per
-                    customer.
+                <p>In the current dynamic economic landscape, financial institutions are increasingly seeking methods to broaden their customer base while maintaining a cautious approach towards risk. When it comes to credit risk analysis in particular, financial institutions tend to have access to multitudes of important user data, but using it to accurately and efficiently predict risk can become difficult based on the data structure. In this project, we will focus on combining customers' income, balance, and transaction category information to create features that help the model predict the default probabilities for each customer. To get the most accurate income estimation, we take into account all possibilities for paychecks by basing inflow on a given definition of regularity. For the balance feature, we calculate the cumulative balance sum, standardize these values and use the balance regression coefficients as well as moving averages. For the transaction features, we calculate the customer's percentage spent by both the inflow and outflow categories. Additionally, we also define a feature that correlates to the account type since different account type has different inflow and outflow amounts per customer. By further refining the important features, we use roughly the most important 40 features to put into the XGBoost model to predict the probability of a customer's default, along with the top three reasons why each user would default.
                 </p>
                 <img src="media/Model_flow_chart.jpeg" alt="Model Flow Chart" />
             </section>
@@ -118,25 +93,19 @@
                 </div>
                 <div class="method">
                     <h4>Feature Creation</h4>
-                    <p>Nearly all our features can be categorized into four main types: balance, income, outflow, and inflow. Some features were derived from ratios between these categories, such as inflow-to-inflow category. This type of analysis aims to help explain trends in credit and debit proportions and their origins. Ratios not directly used were incorporated into a logistic regression model, where instead we utilized default probability as a feature. Another focus area was balance and its trends over time. Regression coefficients were calculated for balance and differences in balance, supplemented by moving averages to capture stable patterns. These features were designed to track changes in users' overall financial activity over extended periods. The final feature that does not fit into the aforementioned categories is account type count. 
-                    </p>
+                    <p>Nearly all our features can be categorized into four main types: balance, income, outflow, and inflow. Some features were derived from ratios between these categories, such as inflow-to-inflow category. This type of analysis aims to help explain trends in credit and debit proportions and their origins. Ratios not directly used were incorporated into a logistic regression model, where instead we utilized default probability as a feature. Another focus area was balance and its trends over time. Regression coefficients were calculated for balance and differences in balance, supplemented by moving averages to capture stable patterns. These features were designed to track changes in users' overall financial activity over extended periods. The final feature that does not fit into the aforementioned categories is account type count. Below is a list of all the features we used in our model, along with their descriptions and suffixes:</p>
                     <div class="dropdown-menu">
                         <details class="feature-detail">
-                            <summary>Account Type Count</summary>
-                            <p>We count the number of accounts for each account type users have. 
-                            </p>
-                        </details>
-                        <details class="feature-detail">
-                            <summary>Balance regression coefficient</summary>
+                            <summary>Balance regression coefficient <span class="suffix">(_balance_std_regress_coeff)</span></summary>
                             <p>Coefficients representing linear trend across time for balance</p>
                         </details>
                         <details class="feature-detail">
-                            <summary>Difference in balance regression coefficient</summary>
+                            <summary>Difference in balance regression coefficient <span class="suffix">(_balance_std_diff_regress_coeff)</span></summary>
                             <p>Coefficients representing the linear trend of the difference in standardized balance across time for balance
                             </p>
                         </details>
                         <details class="feature-detail">
-                            <summary>Simple moving average of standardized balance</summary>
+                            <summary>Simple moving average of standardized balance <span class="suffix">(_month#_SMA)</span></summary>
                             <p style="font-family: 'Courier New', monospace; font-size: medium;">
                                 SMA = Sum of average standardized balances in the window / (Number of data points in the window)
                             </p>
@@ -145,7 +114,7 @@
                                 
                         </details>
                         <details class="feature-detail">
-                            <summary>Exponential moving average of standardized balance</summary>
+                            <summary>Exponential moving average of standardized balance <span class="suffix">(_month#_EMA)</span></summary>
                             <p style="font-family: 'Courier New', monospace;">
                                 EMA<sub>t</sub> = (&alpha; &times; Balance<sub>t</sub>) + ((1 - &alpha;) &times; EMA<sub>t-1</sub>)
                             </p>
@@ -158,30 +127,35 @@
                             <p>We found all the EMA's calculated with a window size of two months for the most recent 7 months of data by account type. </p>
                         </details>
                         <details class="feature-detail">
-                            <summary>Probability of Default by % Spent of Income by Category of Outflow</summary>
+                            <summary>Probability of Default by % Spent of Income by Category of Outflow <span class="suffix">(_cat_income_proba)</span></summary>
                             <p>We calculated the proportion spent of income by category of outflow, and then applied logistic regression to find the probability of default.
                             </p>
                         </details>
                         <details class="feature-detail">
-                            <summary>Probability of Default by % Spent of Inflow by Category of Outflow</summary>
+                            <summary>Probability of Default by % Spent of Inflow by Category of Outflow <span class="suffix">(_cat_proba)</span></summary>
                             <p>We calculated the proportion spent of inflow by category of outflow, and then applied logistic regression to find the probability of default.
                             </p>
                         </details>
                         <details class="feature-detail">
-                            <summary>% of Inflow by Inflow Category </summary>
+                            <summary>% of Inflow by Inflow Category <span class="suffix">(_inflow_over_inflow)</span></summary>
                             <p>We calculated the proportion spent of inflow by category of inflow.</p>
                         </details>
                         <details class="feature-detail">
-                            <summary>% of Inflow by Income Category </summary>
+                            <summary>% of Inflow by Income Category <span class="suffix">(_inflow_over_income)</span></summary>
                             <p>We calculated the proportion spent of income by category of inflow.</p>
                         </details>
                         <details class="feature-detail">
-                            <summary>% of Inflow by Outflow Category </summary>
+                            <summary>% of Inflow by Outflow Category <span class="suffix">(_inflow_over_outflow)</span></summary>
                             <p>We calculated the proportion spent of outflow by category of inflow.</p>
                         </details>
                         <details class="feature-detail">
-                            <summary>% of Outflow by Income Category </summary>
+                            <summary>% of Outflow by Income Category <span class="suffix">(_outflow_over_income)</span></summary>
                             <p>We calculated the proportion spent of income by category of outflow.</p>
+                        </details>
+                        <details class="feature-detail">
+                            <summary>Account Type Count <span class="suffix">(_acct_count)</span></summary>
+                            <p>We count the number of accounts for each account type users have. 
+                            </p>
                         </details>
                     </div>
                 </div>
@@ -506,7 +480,7 @@
                         <li>
                             <p>Default Probability</p>
                             <ul>
-                                <li>We assign each user a probability of default score from 0 to 1. </li>
+                                <li>We assign each consumer a probability of default score from 0 to 1. The closer to 1, the more likely the consumer is to default.</li>
                             </ul>
                         </li>
                         <li>

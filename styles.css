@@ -251,7 +251,7 @@ main section {
 .dropdown-menu {
     display: flex;
     flex-direction: column;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
 
 .feature-detail {
@@ -273,6 +273,11 @@ main section {
     &[open] summary {
         font-style: bold;
     }
+}
+
+.suffix {
+    color:black;
+    font-style: italic;
 }
 
 #ema-formula {
