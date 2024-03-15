@@ -340,7 +340,11 @@ main section {
     }
 }
 
-.reason-explanation {
+.reason-explanation summary{
+    cursor: pointer;
+}
+
+.explanation {
     padding: 20px;
     > li {
         padding-bottom: 10px;

@@ -62,12 +62,12 @@
         <main>
             <section id="abstract">
                 <h3>Abstract</h3>
-                <p>Within the realm of financial lending, the FICO score has long served as the primary tool for assessing potential borrowers. In this paper, we suggest leveraging the capabilities of machine learning alongside borrowers' transactional data to forecast the likelihood of customer default. Specifically, income, balance, and transaction category emerge as pivotal factors correlated with credit risk for each individual. This paper aims to construct a model that integrates all these features and combinations therein to anticipate whether a customer is likely to default on their banking transactions.
+                <p>Within the realm of financial lending, the FICO score has long served as the primary tool for assessing potential borrowers. Recognizing the limitations of traditional FICO scores, which rely heavily on credit history and may disadvantage first-time applicants, we propose the use of cash scores as an alternative metric. That is, leveraging the capabilities of machine learning alongside borrowers' transactional data to forecast the likelihood of customer default. Specifically, income, balance, and transaction category emerge as pivotal factors correlated with credit risk for each individual. This project aims to construct a model that integrates all these features and combinations therein to anticipate whether a customer is likely to default on their banking transactions.
                 </p>
             </section>
             <section id="introduction">
                 <h3>Introduction</h3>
-                <p>In the current dynamic economic landscape, financial institutions are increasingly seeking methods to broaden their customer base while maintaining a cautious approach towards risk. When it comes to credit risk analysis in particular, financial institutions tend to have access to multitudes of important user data, but using it to accurately and efficiently predict risk can become difficult based on the data structure. In this project, we will focus on combining customers' income, balance, and transaction category information to create features that help the model predict the default probabilities for each customer. To get the most accurate income estimation, we take into account all possibilities for paychecks by basing inflow on a given definition of regularity. For the balance feature, we calculate the cumulative balance sum, standardize these values and use the balance regression coefficients as well as moving averages. For the transaction features, we calculate the customer's percentage spent by both the inflow and outflow categories. Additionally, we also define a feature that correlates to the account type since different account type has different inflow and outflow amounts per customer. By further refining the important features, we use roughly the most important 40 features to put into the XGBoost model to predict the probability of a customer's default, along with the top three reasons why each user would default.
+                <p>In today's dynamic economic landscape, financial institutions strive to broaden their customer base while managing risk prudently. Credit risk analysis presents a challenge despite access to extensive user data, due to the complexity of data structures. Traditional FICO scores, heavily reliant on credit history, may pose challenges for first-time applicants lacking such history. To address this issue, we propose the use of cash scores, derived from transactional data, as an alternative metric for assessing creditworthiness. This project focuses on combining customers' income, balance, and transaction category information to create predictive features for assessing default probabilities for each customer. To get the most accurate income estimation, we take into account all possibilities for paychecks by basing inflow on a given definition of regularity. For the balance feature, we calculate the cumulative balance sum, standardize these values and use the balance regression coefficients as well as moving averages. For the transaction features, we calculate the customer's percentage spent by both the inflow and outflow categories. Additionally, we also define a feature that correlates to the account type since different account type has different inflow and outflow amounts per customer. By further refining the important features, we use roughly the most important 40 features to put into the XGBoost model to predict the probability of a customer's default, along with the top three reasons why each user would default.
                 </p>
                 <img src="media/Model_flow_chart.jpeg" alt="Model Flow Chart" />
             </section>
@@ -494,7 +494,8 @@
 
                             <div class="dropdown-menu">
                                 <details class="reason-explanation">
-                                    <summary>Reason Code Explanations</summary>
+                                <summary>Reason Code Explanations</summary>
+                                <ol class="explanation">
                                     <li><p>CREDIT CARD PAYMENT outflow over income: </p>
                                         <ul>This being the most frequently identified reason suggests that high credit card payments compared to a person's income are a common indicator of financial stress, which could lead to default.
                                         </ul>
@@ -567,8 +568,8 @@
                                         </ul>
                                     </li>
                                 </li>
-                                    
-                                </details>
+                            </ol>
+                            </details>
                             </div>
                                 
                     </ul>
