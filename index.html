@@ -97,11 +97,11 @@
                     <div class="dropdown-menu">
                         <details class="feature-detail">
                             <summary>Balance regression coefficient <span class="suffix">(_balance_std_regress_coeff)</span></summary>
-                            <p>Coefficients representing linear trend across time for balance</p>
+                            <p>Coefficients representing linear trend across time for balance. A positive coefficient suggests growing balances, potentially indicating financial stability. Conversely, a negative coefficient might imply dwindling funds, which could signal an increasing risk of default.</p>
                         </details>
                         <details class="feature-detail">
                             <summary>Difference in balance regression coefficient <span class="suffix">(_balance_std_diff_regress_coeff)</span></summary>
-                            <p>Coefficients representing the linear trend of the difference in standardized balance across time for balance
+                            <p>Coefficients representing the linear trend of the difference in standardized balance across time for balance. A stable or increasing trend may denote sound financial management, while a decreasing trend could be a red flag for potential default due to increasing financial instability.
                             </p>
                         </details>
                         <details class="feature-detail">
@@ -109,7 +109,7 @@
                             <p style="font-family: 'Courier New', monospace; font-size: medium;">
                                 SMA = Sum of average standardized balances in the window / (Number of data points in the window)
                             </p>
-                            <p>We found all the SMA's calculated with a window size of two months for the last 7 months of data by account type.  
+                            <p>We found all the SMA's calculated with a window size of two months for the last 7 months of data by account type. A downward SMA trend across months might indicate diminishing liquidity, hinting at higher default risk.
                             </p>
                                 
                         </details>
@@ -124,37 +124,37 @@
                                 <li><strong>&alpha;:</strong> Factor for degree of exponential weighting given to recent observations. 
                                 <li><strong>EMA<sub>t-1</sub>:</strong> Exponential Weighted Moving Average value from previous window</li>
                             </ul>
-                            <p>We found all the EMA's calculated with a window size of two months for the most recent 7 months of data by account type. </p>
+                            <p>We found all the EMA's calculated with a window size of two months for the most recent 7 months of data by account type. The EMA is sensitive to recent financial activity. An EMA decreasing over consecutive months can suggest recent financial strain, possibly increasing default probability.</p>
                         </details>
                         <details class="feature-detail">
                             <summary>Probability of Default by % Spent of Income by Category of Outflow <span class="suffix">(_cat_income_proba)</span></summary>
-                            <p>We calculated the proportion spent of income by category of outflow, and then applied logistic regression to find the probability of default.
+                            <p>We calculated the proportion spent of income by category of outflow, and then applied logistic regression to find the probability of default. A high percentage spent on any category, particularly non-essential ones, could imply a lack of financial control and a higher chance of default.
                             </p>
                         </details>
                         <details class="feature-detail">
                             <summary>Probability of Default by % Spent of Inflow by Category of Outflow <span class="suffix">(_cat_proba)</span></summary>
-                            <p>We calculated the proportion spent of inflow by category of outflow, and then applied logistic regression to find the probability of default.
+                            <p>We calculated the proportion spent of inflow by category of outflow, and then applied logistic regression to find the probability of default. This can indicate how much of the incoming cash flow is immediately going out, with higher percentages possibly indicating living beyond means and thus a higher risk of default.
                             </p>
                         </details>
                         <details class="feature-detail">
                             <summary>% of Inflow by Inflow Category <span class="suffix">(_inflow_over_inflow)</span></summary>
-                            <p>We calculated the proportion spent of inflow by category of inflow.</p>
+                            <p>We calculated the proportion spent of inflow by category of inflow. An imbalance with excessive inflows in less stable categories could suggest irregular income patterns, potentially leading to financial unpredictability and default.</p>
                         </details>
                         <details class="feature-detail">
                             <summary>% of Inflow by Income Category <span class="suffix">(_inflow_over_income)</span></summary>
-                            <p>We calculated the proportion spent of income by category of inflow.</p>
+                            <p>We calculated the proportion spent of income by category of inflow. This feature can reveal dependence on certain income sources. Heavy reliance on potentially unreliable income sources could forecast a higher risk of default.</p>
                         </details>
                         <details class="feature-detail">
                             <summary>% of Inflow by Outflow Category <span class="suffix">(_inflow_over_outflow)</span></summary>
-                            <p>We calculated the proportion spent of outflow by category of inflow.</p>
+                            <p>We calculated the proportion spent of outflow by category of inflow. Ratios close to or over 1 indicate that inflows are sufficient to cover outflows in those categories. Ratios much lower than 1 could flag areas where spending is not sustainably covered by income, leading to possible default.</p>
                         </details>
                         <details class="feature-detail">
                             <summary>% of Outflow by Income Category <span class="suffix">(_outflow_over_income)</span></summary>
-                            <p>We calculated the proportion spent of income by category of outflow.</p>
+                            <p>We calculated the proportion spent of income by category of outflow. High percentages may suggest that a consumer is over-leveraged in certain areas, possibly compromising their ability to service debts.</p>
                         </details>
                         <details class="feature-detail">
                             <summary>Account Type Count <span class="suffix">(_acct_count)</span></summary>
-                            <p>We count the number of accounts for each account type users have. 
+                            <p>We count the number of accounts for each account type users have. A higher count could indicate more complex financial management, but if the number is unusually high for certain account types, it may also hint at attempts to spread funds to conceal financial troubles, which could be indicative of a higher default risk.
                             </p>
                         </details>
                     </div>
@@ -491,7 +491,79 @@
                                 <img src="media/most_common_reasons.png" alt="ROC Curve for XGBoost" />
                                 </li>
                             </ul>
-                        </li>
+                            <ol class="reason-explanation">
+                                <li><p>CREDIT CARD PAYMENT outflow over income: </p>
+                                    <ul>This being the most frequently identified reason suggests that high credit card payments compared to a person's income are a common indicator of financial stress, which could lead to default.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Predictions cat proba: </p>
+                                    <ul>The frequent identification of this feature suggests that the probability of default as determined by spending patterns across different categories is a strong predictor. It indicates that how and where people spend their money provides significant insight into their likelihood of defaulting.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>checking month# EMA <span style="color:black;">and </span> checking month# SMA: </p>
+                                    <ul>These features show the exponential and simple moving averages of account balances over recent months. A high rank for these features indicates that trends in account balances are key indicators of financial stability or distress, which are predictive of default risk.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>CHECKING balance std diff regress coeff:</p> 
+                                    <ul>The standard difference in balance regression coefficient for checking accounts implies that changes in the balance over time are significant. It may be that large swings in the account balance can predict financial instability.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>EXTERNAL TRANSFER inflow over income <span style="color:black;">and </span> EXTERNAL TRANSFER inflow over inflow: </p>
+                                    <ul>These features indicate the proportion of income or total inflow that comes from external transfers. If these are high, it may signal reliance on non-regular income sources, which can be less stable and increase default risk.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>MISCELLANEOUS inflow over income: </p>
+                                    <ul>When a large portion of income is categorized as miscellaneous, it might reflect irregular or unpredictable financial behavior, which can be a precursor to default.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>SMALL DOLLAR ADVANCE inflow over outflow: </p>
+                                    <ul>A high proportion of inflow from small dollar advances relative to total outflows may indicate reliance on short-term, high-interest loans, which are often indicative of financial strain and a higher default risk.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>REFUND inflow over outflow <span style="color:black;">and </span> REFUND inflow over income: </p>
+                                    <ul>This might reflect that the person often overextends financially or may be consistently returning purchases, which can indicate cash flow problems that could lead to default.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>EDUCATION outflow over income: </p>
+                                    <ul>The prominence of this feature suggests that individuals who spend a substantial portion of their income on educational expenses are commonly at risk of default, possibly due to the burden of education-related debt or the impact of large expenses on overall financial stability.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>DEPOSIT inflow over outflow: </p>
+                                    <ul>A lower ratio could indicate an individual's inflows are not sufficient to cover outflows, signaling potential financial distress.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>CHECKING balance std regress coeff: </p>
+                                    <ul>
+                                        <li>If the regression coefficient is negative, it indicates that the user's checking account balance has been consistently decreasing over the period analyzed. A negative trend could mean the user is spending more than they are depositing, which can lead to overdrafts, inability to meet financial obligations, and eventual default.</li>
+                                        <li>If the regression coefficient is positive, it may suggest erratic income patterns, such as sudden large deposits followed by quick depletion. While a growing balance is generally positive, if the increase is due to unpredictable or unsustainable sources (like a one-time loan or windfall), this may not represent stable financial health.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>SAVINGS acct count: </p>
+                                    <ul>Having many savings accounts may not directly cause default but could be correlated with more complex financial behaviors or attempts to manage cash flow across multiple accounts.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>RENT outflow over income <span style="color:black;">and </span>PAYCHECK PLACEHOLDER inflow over inflow:</p> 
+                                    <ul>High rent expenses may also cause financial strain, and a high proportion of income from paycheck placeholders may indicate irregular income patterns.
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>OVERDRAFT outflow over income:</p>
+                                    <ul>Frequency of overdrafts can indicate financial instability and a higher likelihood of default.
+                                    </ul>
+                                </li>
+                            </li>
                     </ul>
             </section>
             

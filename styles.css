@@ -340,6 +340,16 @@ main section {
     }
 }
 
+.reason-explanation {
+    padding: 20px;
+    > li {
+        padding-bottom: 10px;
+        > :first-child {
+            color: rgb(44, 131, 160);
+        }
+    }
+}
+
 #top-btn {
     position: fixed;
     bottom: 4rem;
@@ -469,7 +479,7 @@ footer {
             margin: 0.2rem 0
         }
         mi, mo, mn {
-            font-size: 0.6rem;
+            font-size: 0.5rem;
         }
     }
 }
